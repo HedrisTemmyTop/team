@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  margin: auto;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  background: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 6rem;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  padding: 3rem;
+  padding-top: 5rem;
+  margin-top: 6rem;
+  width: 100vw;
+  max-width: 1200px;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.1);
+}
+.wrapper .close-btn {
+  position: absolute;
+  z-index: 99;
+  top: 16px;
+  right: 16px;
+
+  cursor: pointer;
+}
+.wrapper .close-btn svg {
+  font-size: 2.5rem;
+}
+
+.form {
+  padding-right: 3rem;
+}
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 5rem;
+}
+.form-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-header .logo-circle {
+  height: 3rem;
+  width: 3rem;
+  display: block;
+  background-color: #035fff;
+  border-radius: 50%;
+}
+.form-header .logo h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-left: 0.6rem;
+  color: #05365c;
+}
+.form-header .logo h1 .lean {
+  font-weight: 300;
+}
+.form-header .timer {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+.form-header .timer-box {
+  background-color: #17254c;
+  color: #fff;
+  height: 1.9rem;
+  width: 1.3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+.form-header .timer-divider {
+  margin-inline: 4px;
+}
+.form-body form .input-group {
+  margin-bottom: 2rem;
+}
+.form-body form .input-group .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 1.8rem;
+}
+.form-body form .input-group .header .description .title {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #05365c;
+  margin-bottom: 0.4rem;
+}
+.form-body form .input-group .header .description .desc {
+  font-size: 0.77rem;
+  font-weight: 500;
+  color: #8e96a3;
+}
+.form-body form .input-group .header button.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  color: #1da1f2;
+  background-color: transparent;
+}
+button.edit:hover {
+  border: 0;
+  outline: none;
+}
+.form-body form .input-group .header button.edit svg {
+  height: 0.9rem;
+  fill: #1da1f2;
+}
+.form-body form .input-group .header button.edit .btn-desc {
+  display: block;
+  margin-left: 0.6rem;
+  font-weight: 500;
+}
+.form-body form .input-group .main {
+  position: relative;
+  margin-top: 1rem;
+}
+.form-body form .input-group .main img {
+  position: absolute;
+}
+.form-body form .input-group .main img.leading-icon {
+  left: 0;
+  height: 2rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 1.2rem;
+}
+.form-body form .input-group .main img.trailing-icon {
+  right: 0;
+  height: 1.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 1.5rem;
+}
+.form-body form .input-group .main input {
+  border: 2px solid rgba(224, 224, 224, 0.5);
+  width: 100%;
+  padding: 1em 4em 1em 4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #f5f8ff, transparent);
+  color: #05365c;
+}
+.form-body form .input-group .main input:focus {
+  outline-color: #0077b6;
+}
+.form-body form .input-group .main input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-body form .input-group.__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-body form .input-group.__col .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  width: 400px;
+  position: relative;
+}
+.form-body form .input-group.__col .grp .divider {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #05365c;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.form-body form .input-group.__col .main {
+  margin-top: 0;
+  width: 400px;
+}
+.form-body form .input-group.__col .main input {
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  background: none;
+}
+.form-body form .input-group.__col .main input:focus {
+  background: rgba(0, 119, 182, 0.05);
+}
+.form-body form .input-group.__col .main input[type="password"] {
+  text-align: left;
+  padding-left: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+.form-body form .input-group.__col .main .trailing-icon {
+  opacity: 0.35;
+}
+.form-body form .input-group.__col .main.__date {
+  width: 42%;
+}
+.form-body form .btn-submit {
+  background-color: #035fff;
+  width: 100%;
+  padding: 1.2em 0;
+  margin-top: 0.75rem;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  transition: all 250ms ease-in-out;
+}
+.form-body form .btn-submit:hover {
+  background-color: #1254d6;
+}
+
+.checkout {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  float: right;
+}
+.checkout .credit-card {
+  width: 16rem;
+  height: 23.4rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), #fff);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 14px 2px rgba(224, 224, 224, 0.6);
+  position: relative;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+.checkout .credit-card__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 8rem;
+}
+.checkout .credit-card__head img {
+  height: 1.8rem;
+}
+.checkout .credit-card__head .chip {
+  height: 3.5rem;
+}
+.checkout .credit-card__body {
+  position: relative;
+  color: #05365c;
+}
+.checkout .credit-card__body span {
+  display: block;
+}
+.checkout .credit-card__body .holder {
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #616161;
+}
+.checkout .credit-card__body .card-digits {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.checkout .credit-card__body .card-digits .hidden-digits {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: initial;
+  margin-right: 0.5rem;
+}
+.checkout .credit-card__body .card-digits .hidden-digits .circle {
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 50%;
+  background-color: #17254c;
+  margin-right: 0.4rem;
+}
+.checkout .credit-card__body .card-digits .visible-digits {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.checkout .credit-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  position: relative;
+  top: 1.4rem;
+}
+.checkout .credit-card__footer .expiry {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.checkout .credit-card__footer .logo {
+  height: 2.5rem;
+}
+.checkout .credit-card .card__design {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3.5rem;
+  left: -6rem;
+  z-index: -1;
+}
+.checkout .credit-card .card__design .inner {
+  display: inline-block;
+  width: 570px;
+  height: 570px;
+  border-radius: inherit;
+  border: inherit;
+}
+.checkout .blu {
+  display: block;
+  height: 1.5rem;
+  width: 5rem;
+  background-color: #035fff;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.checkout .checkout-details {
+  background-color: #f0f3f8;
+  height: 82%;
+  width: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+.checkout .checkout-details .purchase-data {
+  position: relative;
+  top: 15.5rem;
+  padding: 2rem;
+}
+.checkout .checkout-details .purchase-data .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: #8e96a3;
+  margin-bottom: 1.2rem;
+}
+.checkout .checkout-details .purchase-data .data .title {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.checkout .checkout-details .purchase-data .data .value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.checkout .checkout-details .purchase-data .data .value img {
+  height: 1.5rem;
+}
+.checkout .checkout-details .purchase-data .data .value .inner-text {
+  color: #05365c;
+  font-weight: 600;
+  margin-left: 0.6rem;
+}
+.checkout .checkout-details .divider {
+  position: absolute;
+  bottom: 7.4rem;
+  width: 100%;
+  border: 4px dashed #cbcbcb;
+  display: flex;
+  align-items: center;
+}
+.checkout .checkout-details .divider .left,
+.checkout .checkout-details .divider .right {
+  position: absolute;
+  height: 2.65rem;
+  width: 2.65rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.checkout .checkout-details .divider .left {
+  bottom: -15px;
+  left: -25px;
+}
+.checkout .checkout-details .divider .right {
+  bottom: -15px;
+  right: -25px;
+}
+.checkout .checkout-details .divider::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  background-color: #f0f3f8;
+  bottom: -30px;
+}
+.checkout .checkout-details .purchase-total {
+  position: absolute;
+  bottom: 1.4rem;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.checkout .checkout-details .purchase-total .total .desc {
+  color: #8e96a3;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.checkout .checkout-details .purchase-total .total .t-amount {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: initial;
+  color: #05365c;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .amount sub {
+  font-size: 0.6rem;
+  position: relative;
+  bottom: 1px;
+  font-weight: 500;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .symbol {
+  position: relative;
+  top: 4px;
+  font-size: 1.1rem;
+  margin-left: 0.2rem;
+  color: #8e96a3;
+}
+.checkout .checkout-details .purchase-total img {
+  height: 1.6rem;
+}
+
+@media only screen and (max-width: 1060px) {
+  .grid {
+    grid-row-gap: 4rem;
+    grid-template-rows: 1fr 1fr;
+    /* padding-right: 0; */
+  }
+  .checkout .checkout-details {
+    height: 75%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .grid {
+    padding: 2rem;
+  }
+  .form .header {
+    margin-right: 1rem;
+  }
+  html {
+    font-size: 60%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
